@@ -1,17 +1,18 @@
 ﻿const Discord = require('discord.js');
-const A7MD = new Discord.Client();
+const client = new Discord.Client();
 
 console.log("BOT ONLINE");
  
-A7MD.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
-سلام عليكم 
-لو سمحت ممكن تدخل سيرفرى
-                               [ رابط السيرفر ] 
+تريد شراء نايترو؟ تريد شراء حسابات ماين كرافت؟
+اي شئ تريده هو هنا !!!
+جيف اواي علي مليون كريدت قريبآآ
+                               [ https://discord.gg/abNrwmA ] 
 الدعووة خاصة لك ... [ ${member}  ]
 **`) 
 }).catch(console.error)
 })
-A7MD.login('التوكين حقك');
+client.login(process.env.BOT_TOKEN);
